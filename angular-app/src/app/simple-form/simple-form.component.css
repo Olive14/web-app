@@ -1,8 +1,10 @@
-.ng-valid {
+/* form以外に適用 */
+.ng-valid:not(form) {
     border-bottom: 2px solid green;
 }
 
-.ng-invalid {
+/* form以外に適用 */
+.ng-invalid:not(form) {
     border-bottom: 2px solid red;
 }
 

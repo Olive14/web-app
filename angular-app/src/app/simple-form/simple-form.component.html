@@ -1,9 +1,9 @@
 <p>simple-form works!</p>
-
-<input [(ngModel)]="text1" required #fieldOne="ngModel">
+<form #calcForm="ngForm">
+<input [(ngModel)]="text1" name="fieldOne" required #fieldOne="ngModel">
 +
-<input [(ngModel)]="text2" required #fieldTwo="ngModel">
-<button (click)="addShow()" [disabled]="fieldOne.invalid || fieldTwo.invalid">CALC</button>
+<input [(ngModel)]="text2" name="fieldTwo" required #fieldTwo="ngModel">
+<button (click)="addShow()" [disabled]="calcForm.invalid">CALC</button>
 <div>{{ result }}</div>
 <div>
     <span *ngIf="fieldOne.invalid" class="invalid-msg">左側のフィールドが空白です</span>
@@ -11,3 +11,4 @@
 <div>
     <span *ngIf="fieldTwo.invalid" class="invalid-msg">右側のフィールドが空白です</span>
 </div>
+</form>
