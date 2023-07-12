@@ -1,0 +1,11 @@
+<p>controls works!</p>
+
+<form [formGroup]="coffeeForm" novalidate>
+    <div>
+        <label>商品：<input formControlName="name"></label>
+    </div>
+    <div>
+        <label>テイスト：<input formControlName="taste" size="50"></label>
+    </div>
+</form>
+<p>フォーム入力値： {{coffeeForm.value | json}}</p>
