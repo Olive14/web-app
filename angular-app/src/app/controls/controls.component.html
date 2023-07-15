@@ -11,11 +11,8 @@
     <!--ラジオボタン-->
     <!--hotcoldというformControlName属性で、どのFormControlと紐づけるのかを決定する<div class=""></div>-->
     <div>
-        <span>
-            <input type="radio" formControlName="hotcold" value="Hot">Hot
-        </span>
-        <span>
-            <input type="radio" formControlName="hotcold" value="Cold">Cold
+        <span *ngFor="let state of hotcoldsel">
+            <input type="radio" formControlName="hotcold" [value]="state"> {{state}}
         </span>
     </div>
 </form>
