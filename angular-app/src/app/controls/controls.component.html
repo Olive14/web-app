@@ -7,5 +7,16 @@
     <div>
         <label>テイスト：<input formControlName="taste" size="50"></label>
     </div>
+
+    <!--ラジオボタン-->
+    <!--hotcoldというformControlName属性で、どのFormControlと紐づけるのかを決定する<div class=""></div>-->
+    <div>
+        <span>
+            <input type="radio" formControlName="hotcold" value="Hot">Hot
+        </span>
+        <span>
+            <input type="radio" formControlName="hotcold" value="Cold">Cold
+        </span>
+    </div>
 </form>
 <p>フォーム入力値： {{coffeeForm.value | json}}</p>
